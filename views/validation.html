@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <title> Orinoco </title>
+	<meta charset="utf-8"/>
+    <meta name="description" content="Orinoco, le site 100% consacrée à la vente d'oursons en peluche, fait main !">
+    <meta name="author" content="Mignano Gino">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@GinoDEVmignano">
+    <meta name="twitter:title" content="Orinoco">
+    <meta name="twitter:description" content="Vente en ligne d'oursons en peluche, fait main.">
+    <meta name="twitter:creator" content="@GinoDEVmignano">
+    <!-- meta facebook -->
+    <meta property="og:title" content="Orinoco">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Vente en ligne d'oursons en peluche, fait main.">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/29d0c15e9b.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+</head>
+
+<body class="bg-white-lines">
+    
+    <header>
+        <div class="container-fluid bg-light-rose mb-5 py-3">
+            <div class="row">
+                <!-- Barre de navigation -->
+                <nav class="col navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand px-3  text-size" href="../index.html">
+                        <i class="bg-multi fas fa-shopping-cart"></i>
+                        <span class="font-belli font-weight-bold">Orinoco</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div id="navbarContent" class="collapse navbar-collapse pl-5">
+                        <ul class="navbar-nav text-size-nav w-100 navbar-left">
+                            <li class="nav-item active font-weight-bold">
+                                <a class="nav-link" href="../index.html">Accueil</a>
+                            </li>
+                            <li class="nav-item font-weight-bold">
+                                <a class="nav-link" href="nous_contacter.html">Nous contacter</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav  w-100 navbar-right d-block">
+                            <li class="nav-item">
+                                <a class="navbar-brand nav-link d-block" href="panier.html">
+                                    <i class="fas fa-shopping-basket d-none d-sm-none d-md-none d-lg-block text-size text-right"></i>
+                                    <div class="d-block d-xs-block d-sm-block d-md-block d-lg-none font-weight-bold">Mon panier</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </nav>
+                <!-- End - Barre de navigation -->
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1 class="text-center mb-3">Merci pour votre commande !</h1>
+            <p id="order" class="text-center mb-3"></p>
+            <div class="row">
+                <div class="col-10 card mx-auto d-none d-sm-none d-md-block">
+                    <div class="row card-body text-center font-weight-bold">
+                        <div class="col-2">Nom</div>
+                        <div class="col-2">Couleur</div>
+                        <div class="col-4">Réf</div>
+                        <div class="col-2">Nombre</div>
+                        <div class="col-2">Prix</div>
+                    </div>
+                </div>
+                <!-- Récapitulatif de commande -->
+                <div id="recap" class="col-10 card mx-auto pt-5">
+                </div>
+                
+            </div>    
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container-fluid foot-b py-3 bg-light-rose">
+            <div class="row">
+                <div class="col text-center">
+                    <ul class="list-inline my-3">
+                        <li class="list-inline-item "><a href="#">Contact</a></li>
+                        <li class="list-inline-item "></li><i class="pr-3 fas fa-ellipsis-v bg-multi"></i></li>
+                        <li class="list-inline-item "><a href="#">Mentions légales</a></li>
+                        <li class="list-inline-item "></li><i class="pr-3 fas fa-ellipsis-v bg-multi"></i></li>
+                        <li class="list-inline-item "><a href="#">Orinoco</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+ <script src="../javascript/validation.js"></script>
+</body>
+
+  
+
+</html>

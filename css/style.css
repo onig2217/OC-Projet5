@@ -1,0 +1,127 @@
+/* Global */
+a {
+    text-decoration: none!important;
+    
+}
+footer a {
+    color: #040506!important;
+    font-weight: bold;
+}
+footer a:hover {
+    color: rgba(0,0,0,.5)!important;
+}
+.bg-light-rose {
+    background-color: #f3e9f1;
+} 
+.bg-white-lines {
+    background-image: url(../images/lines-h2-bg.png);
+    background-size: auto!important;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 120px;
+}
+
+/* Font */
+@font-face{font-family:'belligerent';src:url("../font/belligerent.ttf") format("truetype")}
+
+.font-belli {
+    font-family: 'belligerent', 'calibri';
+}
+
+.bg-multi {
+    background: #e68a09;
+    background: -moz-linear-gradient(-45deg, #e68a09 0%, #af6ca4 50%, #8f5bfe 100%);
+    background: -webkit-linear-gradient(-45deg, #e68a09 0%, #af6ca4 50%, #8f5bfe 100%);
+    background: linear-gradient(135deg, #e68a09 0%, #af6ca4 50%, #8f5bfe 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* Size */
+.text-size {
+    font-size: 2rem!important;
+}
+
+.text-size-nav {
+    font-size: 1.2rem!important;
+}
+
+
+.border-size {
+    border-width: 3px!important;
+    border-color: black!important;
+}
+
+/* Carousel */
+.carousel-indicators-position {
+    position: relative!important;
+}
+
+.carousel-item img {
+    height: auto;
+    max-height: 350px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon, .carousel-indicators {
+    filter: invert(100%);
+}
+
+/* Media screen */
+
+@media screen and (max-width: 1200px) {
+    .carousel-item img {
+        height: 300px;
+    }
+}
+@media screen and (max-width: 991px) {
+    #carouselOnTop {
+        width: 65%!important;
+    }
+}
+@media screen and (max-width: 767px) {
+
+    #carouselOnTop {
+      width: 70%!important;
+    }
+    .carousel-item img {
+        height: 220px!important;
+    }
+    #teddies img {
+        width: 80%!important;
+        display: block!important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .btnvalid, .btnreturn {
+        text-align: center!important;
+    }
+    #btnaddcart {
+        float: none!important;
+        display: block;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .mt-responsive-3 {
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 575px) {
+    #carouselOnTop {
+        width: 75%!important;
+    }
+    .carousel-item img {
+        height: 180px!important;
+    }
+    footer a {
+        font-size: 0.9rem!important;
+    }
+    
+}
+
