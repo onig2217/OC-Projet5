@@ -179,28 +179,8 @@ if (panier !==null) {
             totalPrice = [];
             totalPrice.push({price: total});
             localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
-            var test = 0;
-            let orderId = [];
-
-            fetch('http://localhost:3000/api/teddies/order', { 
-            method: 'post',
-            headers: { "Content-type": "application/JSON; charset=UTF-8"},
-            body: JSON.stringify({contact,products}) 
-            })
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                console.log(data);
-                test = data.orderId;
-                
-                orderId.push({order: test});
-                localStorage.setItem("orderId", JSON.stringify(orderId)); 
-                document.location.href="../views/validation.html";
-                
-            })
-
-            /*var API = "http://localhost:3000/api/teddies/order";
+            
+            var API = "http://localhost:3000/api/teddies/order";
             
             contactAPI(API, {contact,products}).then(function(data) {
                 
@@ -210,9 +190,9 @@ if (panier !==null) {
                 test = data.orderId;
                 orderId.push({order: test});
                 localStorage.setItem("orderId", JSON.stringify(orderId)); 
-                //document.location.href="../views/validation.html";
+                document.location.href="../views/validation.html";
                 
-            })*/
+            })
         }
     })
 

@@ -3,33 +3,8 @@ const teddiesList = document.getElementById("teddies");
 // On récupère les infos de l'API
 var API = "http://localhost:3000/api/teddies";
 
-async function produits(url) {
-    let result = await fetch(url);
-    return result.json();
-}
-
-// test 
-
-/*async function contactAPI(url,object) {
-
-    if (object == null) {
-        let result = await fetch(url);
-        return result.json();
-    } else {
-        fetch(url, { 
-        method: 'post',
-        headers: { "Content-type": "application/JSON; charset=UTF-8"},
-        body: JSON.stringify(object) 
-        })
-        .then(function(response) {
-            return response.json();
-        })
-        
-    }
-}*/
-
 // On affiche ce qu'on récupère de l'API
-produits(API).then(teddies => {
+contactAPI(API).then(teddies => {
     teddies.forEach(teddy => {
         teddiesList.innerHTML += 
         `

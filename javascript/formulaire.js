@@ -7,7 +7,7 @@ function validationForm() {
     var email = document.getElementById("email").value;
     var error_message = document.getElementById("error_message");
     error_message.innerHTML = "";
-    //  /\d/.test(firstname)
+    
 
     if(firstname.length <2 || firstname.length>30 || /\d/.test(firstname)){
         error_message.innerHTML += 

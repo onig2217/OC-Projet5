@@ -1,5 +1,6 @@
 // On récupère les ID 
 const descriptionproduit = document.getElementById("produit");
+const test = document.getElementById("produitBottom");
 const prix = document.getElementById("prix");
 var colorTeddy = document.getElementById("choixCouleur");
 let btnAddCart = document.getElementById("btnaddcart");
@@ -8,13 +9,8 @@ let btnAddCart = document.getElementById("btnaddcart");
 var urlParams = new URLSearchParams(window.location.search);
 var IdProduit = urlParams.get("product");
 
-async function produits(url) {
-    let result = await fetch(url);
-    return result.json();
-}
+contactAPI('http://localhost:3000/api/teddies/'+ IdProduit).then(teddy => {
 
-produits('http://localhost:3000/api/teddies/'+ IdProduit).then(teddy => {
-    
     if ( IdProduit === teddy._id) {
         document.title = " L'ourson " + teddy.name;
         // On affiche le produit
@@ -42,7 +38,23 @@ produits('http://localhost:3000/api/teddies/'+ IdProduit).then(teddy => {
                 `
             ;
         })
-    } 
+    } else {
+        test.innerHTML =
+        `
+        <div  class="row card-body mb-3">
+            <div class="text-center"> Une erreur est survenue !</div>
+        </div>
+        <div class="card-body">  
+            <a href="../index.html">
+                <button class="btn btn-primary" type="button">
+                    Retour à l'accueil
+                </button>
+            </a>
+        </div>
+                
+        `
+    ;    
+    }
     
     // Event click pour ajouter un produit au panier
     btnAddCart.addEventListener('click', event => {
@@ -72,7 +84,6 @@ produits('http://localhost:3000/api/teddies/'+ IdProduit).then(teddy => {
         }
         localStorage.setItem('panier', JSON.stringify(panier));
     });
-}) .catch(function(){
-    console.log("erreur");
-});
+}) 
+
 
